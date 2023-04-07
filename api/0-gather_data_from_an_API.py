@@ -4,10 +4,10 @@ import requests
 from sys import argv
 
 if __name__ == '__main__':
-    API_URL = 'https://jsonplaceholder.typicode.com'
+    url = 'https://jsonplaceholder.typicode.com'
     user_id = argv[1]
     response = requests.get(
-        f'{API_URL}/users/{user_id}/todos',
+        f'{url}/users/{user_id}/todos',
         params={'_expand': 'user'}
     )
 
